@@ -87,20 +87,20 @@ export interface IItemViewModel {
     description?: string | undefined;
 }
 export declare class Exception implements IException {
-    message?: string | undefined;
+    message: string;
     innerException?: Exception | undefined;
-    stackTrace?: string | undefined;
     source?: string | undefined;
+    stackTrace?: string | undefined;
     constructor(data?: IException);
     init(_data?: any): void;
     static fromJS(data: any): Exception;
     toJSON(data?: any): any;
 }
 export interface IException {
-    message?: string | undefined;
+    message: string;
     innerException?: Exception | undefined;
-    stackTrace?: string | undefined;
     source?: string | undefined;
+    stackTrace?: string | undefined;
 }
 /** Data transfer object to create a new item. */
 export declare class CreateItemDTO implements ICreateItemDTO {
@@ -155,7 +155,7 @@ export declare class SystemException extends Exception implements ISystemExcepti
 export interface ISystemException extends IException {
 }
 export declare class ArgumentException extends SystemException implements IArgumentException {
-    message?: string | undefined;
+    message: string;
     paramName?: string | undefined;
     constructor(data?: IArgumentException);
     init(_data?: any): void;
@@ -163,7 +163,7 @@ export declare class ArgumentException extends SystemException implements IArgum
     toJSON(data?: any): any;
 }
 export interface IArgumentException extends ISystemException {
-    message?: string | undefined;
+    message: string;
     paramName?: string | undefined;
 }
 /** Data transfer object used to update an item. */
