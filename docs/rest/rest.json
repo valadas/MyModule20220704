@@ -1,5 +1,5 @@
 {
-  "x-generator": "NSwag v13.15.10.0 (NJsonSchema v10.6.10.0 (Newtonsoft.Json v11.0.0.0))",
+  "x-generator": "NSwag v13.16.1.0 (NJsonSchema v10.7.2.0 (Newtonsoft.Json v13.0.0.0))",
   "swagger": "2.0",
   "info": {
     "title": "Eraware My Module 20220704",
@@ -254,6 +254,9 @@
     },
     "Exception": {
       "type": "object",
+      "required": [
+        "Message"
+      ],
       "properties": {
         "Message": {
           "type": "string"
@@ -261,10 +264,10 @@
         "InnerException": {
           "$ref": "#/definitions/Exception"
         },
-        "StackTrace": {
+        "Source": {
           "type": "string"
         },
-        "Source": {
+        "StackTrace": {
           "type": "string"
         }
       }
@@ -327,6 +330,9 @@
         },
         {
           "type": "object",
+          "required": [
+            "Message"
+          ],
           "properties": {
             "Message": {
               "type": "string"
